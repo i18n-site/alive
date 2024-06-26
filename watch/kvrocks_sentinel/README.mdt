@@ -1,0 +1,5 @@
+# kvrocks-sentinel
+
+```rust
+<+ ./tests/main.rs>
+```

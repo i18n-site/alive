@@ -1,0 +1,16 @@
+{
+  "name": "@5-/alive",
+  "version": "0.3.2",
+  "repository": "https://atomgit.com/i18n/alive.git",
+  "homepage": "https://atomgit.com/i18n/alive",
+  "author": "i18n.site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./index.js",
+    "./*": "./*"
+  },
+  "peerDependencies": {
+    "@3-/proto": "^2.0.40"
+  },
+  "type": "module"
+}

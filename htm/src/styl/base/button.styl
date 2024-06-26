@@ -1,0 +1,36 @@
+button
+  background-image btn-bg-img
+  background-size 200% auto
+  border 0
+  border-radius 0
+  box-shadow 0 0 3px rgba(0, 0, 0, 0.3) inset
+  color white
+  cursor pointer
+  display block
+  font-family inherit
+  font-size 1em
+  font-weight 700
+  line-height 18px
+  padding 16px
+  text-align center
+  touch-action manipulation
+  transition all 0.6s
+  user-select none
+
+button:hover
+  background-position right center
+  /* change the direction of the change here */
+  color btn-hover-color
+
+button:active, button:focus-visible
+  box-shadow 0 0 5px rgb(0 0 0 / 60%) inset
+  outline 0
+
+button:active
+  transform scale(0.95)
+
+button[disabled]
+  box-shadow 0 0 2em #000 inset
+  cursor not-allowed
+  filter grayscale(100%)
+  opacity 0.4

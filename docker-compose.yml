@@ -1,0 +1,12 @@
+version: '3'
+services:
+  srv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 5123:5123
+    env_file:
+      - .env
+

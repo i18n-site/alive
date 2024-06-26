@@ -1,0 +1,72 @@
+// input[type]:not([type=radio], [type=checkbox]
+input:is([type=text], [type=password], [type=email])
+  border 1px solid #ccc
+  border-radius 0
+  box-sizing border-box
+  font-size 16px
+  line-height 21px
+  outline 0
+  padding 16px
+  width 100%
+
+input:is([type=text], [type=password], [type=email]):autofill
+  background-clip text
+  -webkit-background-clip text
+
+input:is([type=text], [type=password], [type=email]) + label
+  background #fff
+  border-radius 12px
+  color #999
+  font-weight 200
+  left 10px
+  line-height 24px
+  padding 3px 7px
+  position absolute
+  top -16px
+  transition all 0.3s
+  user-select none
+
+input:is([type=text], [type=password], [type=email]):focus
+  border-color focus-color
+  color #000
+
+input:is([type=text], [type=password], [type=email]):focus + label
+  color focus-color
+
+input:is([type=text], [type=password], [type=email]):hover
+  border-color hover-color
+
+input:is([type=text], [type=password], [type=email]):hover + label
+  color hover-color
+
+input:is([type=text], [type=password], [type=email]):disabled
+  background #f9f9f9
+  color #999
+  display inline-block
+  position relative
+  user-select none
+
+input:is([type=text], [type=password], [type=email]):disabled + label
+  background #fcfcfc
+  box-shadow 0 0 3px #ddd inset
+  color #999
+  font-size 14px
+  padding 2px 10px
+  top -15px
+
+input:is([type=text], [type=password], [type=email])::-webkit-input-placeholder
+  user-select none
+
+input:is([type=text], [type=password], [type=email])::placeholder
+  user-select none
+
+input:is([type=text], [type=password], [type=email]):disabled:hover
+  border 1px solid #ccc
+
+input:is([type=text], [type=password], [type=email]):placeholder-shown + label
+  background transparent
+  color #999
+  cursor text
+  left 10px
+  pointer-events none
+  top 13px

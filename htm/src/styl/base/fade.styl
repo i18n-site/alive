@@ -1,0 +1,36 @@
+@keyframes fadeIn
+  0%
+    opacity 0
+
+  30%
+    opacity 0
+
+  100%
+    opacity 0.8
+
+.animated
+  animation-duration 0.5s
+  animation-fill-mode both
+
+@keyframes fadeInLeft
+  from
+    opacity 0
+    transform translate3d(-100%, 0, 0)
+
+  to
+    opacity 1
+    transform translate3d(0, 0, 0)
+
+.animated.fadeInLeft
+  animation-name fadeInLeft
+
+@keyframes fadeOutLeft
+  from
+    opacity 1
+
+  to
+    opacity 0
+    transform translate3d(-100%, 0, 0)
+
+.animated.fadeOutLeft
+  animation-name fadeOutLeft

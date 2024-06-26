@@ -1,0 +1,39 @@
+```proto
+syntax = "proto3";
+
+package api;
+
+message State
+{
+  uint64 pre_change = 1;
+  uint64 runed = 2;
+  uint64 cost_sum = 3;
+  uint32 avg10 = 4;
+  repeated string tag_li = 5;
+}
+
+message Err
+{
+  string err = 1;
+  State state = 2;
+}
+
+message Site
+{
+  string host = 1;
+  repeated State ok_li = 2;
+  repeated Err err_li = 3;
+}
+
+message Kind
+{
+  string name = 1;
+  repeated Site site_li = 2;
+}
+
+message Li
+{
+  uint32 sec_since_pre_check = 1;
+  repeated Kind kind_li = 2;
+}
+```

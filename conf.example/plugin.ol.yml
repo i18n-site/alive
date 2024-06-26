@@ -1,0 +1,15 @@
+alter :
+  - cout
+  - lark
+  - wxpush
+  - mail
+
+watch :
+  - cname_flatten
+  - ipv6_proxy
+  - kvrocks
+  - kvrocks_sentinel
+  - mysql
+  - mysql_iptable
+  - orchestrator
+  - smtp

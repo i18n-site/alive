@@ -1,0 +1,30 @@
+[package]
+name = "tmpl"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://atomgit.com/i18n/alive.git"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/tmpl"
+description = "tmpl"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dev-dependencies]
+loginit = "0.1.10"
+static_init = "1.0.3"
+tracing = "0.1.40"
+
+[dev-dependencies.tokio]
+version = "1.37.0"
+features = ["macros", "rt", "rt-multi-thread", "time", "sync"]
+
+[dependencies]
+alive_api = { version = "0.1.0", path = "../../alive_api" }
+aok = "0.1.3"
+ifs = { version = "0.1.27", default-features = false, features = ["fs"] }
+
+alive_watch = { version = "0.1.1", path = "../../alive_watch" }
+serde = { version = "1.0.197", features = ["derive"] }
+genv = "0.1.7"
+static_init = "1.0.3"

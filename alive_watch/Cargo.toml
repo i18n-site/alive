@@ -1,0 +1,41 @@
+[package]
+name = "alive_watch"
+version = "0.1.5"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://atomgit.com/i18n/alive.git"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/alter/alive_watch"
+description = "alive_watch : alter plugin for alive"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+serde_yaml = "0.9.34"
+aok = "0.1.12"
+dashmap = "6.0.1"
+ifs = { version = "0.1.36", default-features = false, features = ["fs"] }
+tracing = "0.1.40"
+const-str = { version = "0.5.7", optional = true }
+serde = { version = "1.0.203", optional = true }
+alive_api = { optional = true, version = "0.1.6", path = "../alive_api" }
+tokio = { optional = true, version = "1.38.0", features = [
+  "macros",
+  "rt",
+  "rt-multi-thread",
+  "time",
+  "fs",
+  "io-util",
+] }
+
+[features]
+default = ["yml"]
+yml = ["dep:const-str", "dep:serde"]
+yml_cluster = ["yml", "dep:alive_api"]
+yml_cluster_vps_li = ["yml_cluster"]
+cluster_alive = ["yml_cluster_vps_li", "dep:tokio"]
+
+[dev-dependencies]
+loginit = "0.1.13"
+static_init = "1.0.3"
+tracing = "0.1.40"

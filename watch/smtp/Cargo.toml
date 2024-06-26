@@ -1,0 +1,48 @@
+[package]
+name = "smtp"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://atomgit.com/i18n/alive.git"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/smtp"
+description = "smtp"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dev-dependencies]
+loginit = "0.1.13"
+static_init = "1.0.3"
+tracing = "0.1.40"
+
+[dev-dependencies.tokio]
+version = "1.38.0"
+features = [ "macros", "rt", "rt-multi-thread", "time", "sync" ]
+
+[dependencies]
+aok = "0.1.12"
+serde_yaml = "0.9.34"
+rustls-native-certs = "0.7.0"
+static_init = "1.0.3"
+const-str = "0.5.7"
+
+[dependencies.mail-send]
+version = "0.4.8"
+package = "mail-send-fork"
+
+[dependencies.alive_api]
+version = "0.1.6"
+path = "../../alive_api"
+
+[dependencies.ifs]
+version = "0.1.36"
+default-features = false
+features = [ "fs" ]
+
+[dependencies.alive_watch]
+version = "0.1.5"
+path = "../../alive_watch"
+
+[dependencies.serde]
+version = "1.0.203"
+features = [ "derive" ]

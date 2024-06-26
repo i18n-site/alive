@@ -1,0 +1,40 @@
+[package]
+name = "srv"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aok = "0.1.12"
+axum = "0.7.5"
+axum_cors = "0.1.5"
+clap = "4.5.7"
+cmdv = "0.1.9"
+jemallocator = "0.5.4"
+loginit = "0.1.13"
+re = "0.1.7"
+sts = "0.1.23"
+t3 = { version = "0.1.17", default-features = false }
+tower = "0.4.13"
+console-subscriber = { optional = true, version = "0.3.0" }
+tracing = "0.1.40"
+
+[features]
+default = []
+tokio_console = ["dep:console-subscriber"]
+
+[dependencies.alive_plugin]
+version = "0.1.10"
+path = "../alive_plugin"
+features = ["enable"]
+
+[dependencies.alive]
+version = "0.2.3"
+path = "../alive"
+
+[dependencies.alive_api]
+version = "0.1.6"
+path = "../alive_api"
+
+[dependencies.tokio]
+version = "1.38.0"
+features = ["macros", "rt", "rt-multi-thread", "time", "fs", "io-util"]

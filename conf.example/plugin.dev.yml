@@ -1,0 +1,19 @@
+alter :
+  - cout
+  # - lark
+  # - wxpush
+  # - mail
+
+watch :
+  - orchestrator
+  - kvrocks
+  - kvrocks_sentinel
+  # - mysql
+  # - mysql_iptable
+  # - smtp
+  # - cname_flatten
+  # - ipv6_proxy
+  #
+  # - nginx & ssl
+  # - cloudflareHA
+  # - stripe webhooks

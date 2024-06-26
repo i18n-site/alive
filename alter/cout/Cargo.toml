@@ -1,0 +1,27 @@
+[package]
+name = "cout"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://atomgit.com/i18n/alive.git"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/alter/cout"
+description = "cout : alter plugin for alive"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+aok = "0.1.12"
+
+[dependencies.alive_alter]
+version = "0.1.4"
+path = "../../alive_alter"
+
+[dev-dependencies]
+loginit = "0.1.13"
+static_init = "1.0.3"
+tracing = "0.1.40"
+
+[dev-dependencies.tokio]
+version = "1.38.0"
+features = [ "macros", "rt", "rt-multi-thread", "time", "sync" ]

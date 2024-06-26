@@ -1,0 +1,30 @@
+[package]
+name = "alive_alter"
+version = "0.1.4"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://atomgit.com/i18n/alive.git"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/alive_alter"
+description = "tmpl"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dev-dependencies]
+aok = "0.1.12"
+
+[dependencies]
+aok = "0.1.12"
+coarsetime = "0.1.34"
+const-str = { version = "0.5.7", optional = true }
+ifs = { version = "0.1.36", default-features = false, features = ["fs"] }
+serde = { version = "1.0.203", optional = true }
+serde_yaml = { version = "0.9.34", optional = true }
+sts = "0.1.23"
+tracing = "0.1.40"
+
+[features]
+default = []
+yml = ["dep:serde", "dep:serde_yaml", "dep:const-str"]
+denoise = []
+title_txt = []

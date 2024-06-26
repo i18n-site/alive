@@ -1,0 +1,45 @@
+[workspace]
+members = [
+  "alive",
+  "alive_alter",
+  "alive_api",
+  "alive_plugin",
+  "alive_watch",
+  "alter/cout",
+  "alter/lark",
+  "alter/mail",
+  "alter/wxpush",
+  "srv",
+  "watch/_lib/mysql_watch",
+  "watch/_lib/redis_watch",
+  "watch/cname_flatten",
+  "watch/cron",
+  "watch/https",
+  "watch/ipv6_proxy",
+  "watch/kvrocks",
+  "watch/kvrocks_sentinel",
+  "watch/oceanbase",
+  "watch/mysql_iptable",
+  "watch/orchestrator",
+  "watch/ping",
+  "watch/ping_ver",
+  "watch/smtp",
+]
+resolver = "2"
+
+[profile.release]
+lto = true
+opt-level = 3
+incremental = true
+codegen-units = 1
+overflow-checks = false
+debug-assertions = false
+# panic = 'abort'
+# strip = true
+
+[profile.dev]
+split-debuginfo = "unpacked"
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

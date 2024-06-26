@@ -1,0 +1,43 @@
+@import './ing.styl'
+
+form
+  flex-direction column
+  position relative
+
+  &>u
+    align-self normal
+    display block
+    margin 0 16px 24px
+    position relative
+    text-decoration none
+
+    &.E
+      &>input
+        border-color #c00
+        color #c00
+
+      &>label
+        color #c00
+
+      &>b
+        color #f00
+        display block
+        font-size 14px
+        font-weight 400
+        margin 8px 0 0 16px
+
+      input:is([type=text], [type=password]):hover
+        border-color #f00
+        color #f00
+
+      input:is([type=text], [type=password]):hover + label
+        color #f00
+
+      input:is([type=text], [type=password]):focus
+        background-color rgba(255, 0, 0, 0.02)
+        border-color #e50
+        color #e50
+
+      input:is([type=text], [type=password]):focus + label
+        box-shadow 0 0 3px rgba(255, 0, 0, 0.5) inset
+        color #e50

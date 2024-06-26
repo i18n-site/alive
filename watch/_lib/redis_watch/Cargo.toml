@@ -1,0 +1,16 @@
+[package]
+name = "redis_watch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aok = "0.1.12"
+fred = "9.0.3"
+
+[dependencies.alive_watch]
+version = "0.1.5"
+path = "../../../alive_watch"
+
+[dependencies.serde]
+version = "1.0.203"
+features = [ "derive" ]

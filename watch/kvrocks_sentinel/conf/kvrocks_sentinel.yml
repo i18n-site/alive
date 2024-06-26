@@ -1,0 +1,5 @@
+ol:
+  port: 124
+  password: 4x3X8x11X522
+  watch:
+    - mymaster

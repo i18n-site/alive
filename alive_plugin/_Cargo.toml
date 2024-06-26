@@ -1,0 +1,33 @@
+[package]
+name = "alive_plugin"
+version = "0.1.10"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://atomgit.com/i18n/alive.git"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/alive_plugin"
+description = "alive plugin"
+
+[dependencies]
+xerr = "0.1.11"
+circular-queue = "0.2.6"
+aok = "0.1.3"
+paste = "1.0.14"
+skiplist = "0.5.1"
+tokio = { version = "1.37.0", features = [
+  "macros",
+  "rt",
+  "rt-multi-thread",
+  "time",
+  "fs",
+  "io-util",
+] }
+alive_alter = { version = "0.1.1", path = "../alive_alter" }
+alive_watch = { version = "0.1.1", path = "../alive_watch" }
+const-str = "0.5.7"
+
+[features]
+default = []
+
+[dependencies.alive_api]
+version = "0.1.1"
+path = "../alive_api"

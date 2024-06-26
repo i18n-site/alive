@@ -1,0 +1,24 @@
+.I
+  &:before
+    content ''
+    height 16px
+    left 50%
+    margin-left -8px
+    margin-top -8px
+    position absolute
+    top 50%
+    width 16px
+
+  &.Y:before
+    background #390
+    clip-path polygon(0 51%, 38% 73%, 100% 0, 100% 35%, 44% 100%, 0 74%)
+
+  &.N:before
+    background #999
+    clip-path polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%)
+
+  &:hover
+    background #f40
+
+    &:before
+      background #fff

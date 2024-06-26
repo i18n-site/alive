@@ -1,0 +1,67 @@
+input[type=checkbox]
+  /* Remove most all native input styles */
+  appearance none
+  border 1px solid currentColor
+  color currentColor
+  cursor pointer
+  display grid
+  flex-shrink 0
+  /* Not emoved via appearance */
+  font inherit
+  height 1.15em
+  margin 0
+  margin-top 0
+  padding 0
+  place-content center
+  transform scale(0.9)
+  width 1.15em
+
+  &+label
+    cursor pointer
+    white-space nowrap
+
+input[type=checkbox]::before
+  background-color #999
+  clip-path polygon(4% 34%, 45% 76%, 97% 2%, 96% 23%, 46% 95%, 4% 54%)
+  content ''
+  height 0.65em
+  transform scale(0)
+  transform-origin bottom left
+  transition 120ms transform ease-in-out
+  width 0.65em
+
+input[type=checkbox]:checked::before
+  transform scale(1)
+
+input[type=checkbox]:disabled
+  cursor not-allowed
+
+input[type=checkbox]:hover
+  border-color hover-color
+  color hover-color
+
+input[type=checkbox]:hover+label
+  color hover-color
+
+input[type=checkbox]:focus
+  color hover-color
+
+input[type=checkbox]:focus+label
+  color hover-color
+
+input[type=checkbox]:focus:checked
+  background hover-color
+
+input[type=checkbox]:focus:checked:before
+  background #fff
+
+input[type=checkbox]:checked:hover
+  background-color checked-color
+  border-color checked-color
+  color checked-color
+
+input[type=checkbox]:checked:hover::before
+  background-color #fff
+
+input[type=checkbox]:checked:hover+label
+  color checked-color
