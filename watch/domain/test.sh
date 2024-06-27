@@ -2,7 +2,6 @@
 
 DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
+set -ex
 
-set -e
-
-bun x direnv_dump >../../.env
+direnv exec . cargo test --all-features -- --nocapture

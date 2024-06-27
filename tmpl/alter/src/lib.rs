@@ -17,7 +17,6 @@ pub struct Alter {
 // impl Alter {
 //   pub async fn _send(&self, title: &str, txt: &str) -> Result<()> {
 //     let r = push::send(title, txt, &*ALIVE_URL).await;
-//     dbg!(r);
 //     OK
 //   }
 // }

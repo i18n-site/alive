@@ -27,6 +27,5 @@ pub async fn on_ok(mut i: Run) -> (Run, Msg) {
     Msg::None
   };
   i.next_ping = now + task.interval;
-  //  i.next_ping = 0; dbg!("disable this line : i.next_ping = 0");
   (i, msg)
 }

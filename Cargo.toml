@@ -23,7 +23,7 @@ members = [
   "watch/orchestrator",
   "watch/ping",
   "watch/ping_ver",
-  "watch/smtp",
+  "watch/smtp", "watch/domain",
 ]
 resolver = "2"
 

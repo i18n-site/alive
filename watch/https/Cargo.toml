@@ -17,13 +17,12 @@ tracing = "0.1.40"
 
 [dev-dependencies.tokio]
 version = "1.38.0"
-features = [ "macros", "rt", "rt-multi-thread", "time", "sync" ]
+features = ["macros", "rt", "rt-multi-thread", "time", "sync"]
 
 [dependencies]
 aok = "0.1.12"
 idns = "0.1.19"
-rustls = { version = "0.23.10", features = ["ring"] }
-tls_ping = "0.1.4"
+tls_ping = "0.1.5"
 
 [dependencies.alive_api]
 version = "0.1.6"
@@ -32,7 +31,7 @@ path = "../../alive_api"
 [dependencies.ifs]
 version = "0.1.36"
 default-features = false
-features = [ "fs" ]
+features = ["fs"]
 
 [dependencies.alive_watch]
 version = "0.1.5"
@@ -40,4 +39,4 @@ path = "../../alive_watch"
 
 [dependencies.serde]
 version = "1.0.203"
-features = [ "derive" ]
+features = ["derive"]

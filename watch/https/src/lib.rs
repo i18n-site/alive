@@ -20,9 +20,6 @@ const DURATION: u64 = 60;
 const TIMEOUT: u64 = 30;
 
 pub async fn load(wc: &alive_watch::Conf) -> Result<Vec<Task<Arg>>> {
-  rustls::crypto::ring::default_provider()
-    .install_default()
-    .expect("Failed to install rustls crypto provider");
   let c: Conf = alive_watch::yml!(wc);
   let mut r = Vec::new();
   for (cluster, host_li) in c.cluster {
