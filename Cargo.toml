@@ -23,7 +23,9 @@ members = [
   "watch/orchestrator",
   "watch/ping",
   "watch/ping_ver",
-  "watch/smtp", "watch/domain",
+  "watch/smtp",
+  "watch/domain",
+  "watch/cdn_refresh",
 ]
 resolver = "2"
 

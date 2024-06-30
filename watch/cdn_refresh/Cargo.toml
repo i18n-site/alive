@@ -1,11 +1,11 @@
 [package]
-name = "https"
+name = "cdn_refresh"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
 repository = "https://atomgit.com/i18n/alive.git"
-homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/https"
-description = "https"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/cdn_refresh"
+description = "cdn_refresh"
 
 [package.metadata.docs.rs]
 all-features = true
@@ -21,17 +21,16 @@ features = ["macros", "rt", "rt-multi-thread", "time", "sync"]
 
 [dependencies]
 aok = "0.1.12"
-idns = "0.1.19"
-tls_ping = "0.1.6"
+tokio-postgres = "0.7.10"
+rustls = "0.23.10"
+tlsinit = "0.1.2"
+tokio-postgres-tls = "0.12.0"
+tokio = "1.38.0"
+chrono = "0.4.38"
 
 [dependencies.alive_api]
 version = "0.1.6"
 path = "../../alive_api"
-
-[dependencies.ifs]
-version = "0.1.36"
-default-features = false
-features = ["fs"]
 
 [dependencies.alive_watch]
 version = "0.1.5"
@@ -40,3 +39,8 @@ path = "../../alive_watch"
 [dependencies.serde]
 version = "1.0.203"
 features = ["derive"]
+
+[dependencies.ifs]
+version = "0.1.36"
+default-features = false
+features = ["fs"]

@@ -62,7 +62,7 @@ pub async fn load(wc: &alive_watch::Conf) -> Result<Vec<Task<Arg>>> {
         for host in host_li {
           for ip in &ip.ipv4_li {
             r.push(Task::new(
-              &host,
+              host,
               Arg {
                 ip: IpAddr::V4(*ip),
                 host: host.into(),
