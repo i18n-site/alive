@@ -1,11 +1,11 @@
 [package]
-name = "ping_ver"
+name = "cdn_refresh"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
 repository = "https://atomgit.com/i18n/alive.git"
-homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/ping_ver"
-description = "ping_ver"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/cdn_refresh"
+description = "cdn_refresh"
 
 [package.metadata.docs.rs]
 all-features = true
@@ -17,24 +17,20 @@ tracing = "0.1.40"
 
 [dev-dependencies.tokio]
 version = "1.38.0"
-features = [ "macros", "rt", "rt-multi-thread", "time", "sync" ]
+features = ["macros", "rt", "rt-multi-thread", "time", "sync"]
 
 [dependencies]
 aok = "0.1.12"
-genv = "0.1.10"
-static_init = "1.0.3"
-vb = "0.1.3"
-dashmap = "6.0.1"
-ireq = "0.1.13"
+tokio-postgres = "0.7.10"
+rustls = "0.23.11"
+tlsinit = "0.1.2"
+tokio-postgres-tls = "0.12.0"
+tokio = "1.38.0"
+chrono = "0.4.38"
 
 [dependencies.alive_api]
 version = "0.1.6"
 path = "../../alive_api"
-
-[dependencies.ifs]
-version = "0.1.36"
-default-features = false
-features = [ "fs" ]
 
 [dependencies.alive_watch]
 version = "0.1.5"
@@ -42,8 +38,9 @@ path = "../../alive_watch"
 
 [dependencies.serde]
 version = "1.0.204"
-features = [ "derive" ]
+features = ["derive"]
 
-[dependencies.tokio]
-version = "1.38.0"
-features = [ "macros", "rt", "rt-multi-thread", "time", "fs", "io-util" ]
+[dependencies.ifs]
+version = "0.1.36"
+default-features = false
+features = ["fs"]

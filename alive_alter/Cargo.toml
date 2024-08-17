@@ -18,7 +18,7 @@ aok = "0.1.12"
 coarsetime = "0.1.34"
 const-str = { version = "0.5.7", optional = true }
 ifs = { version = "0.1.36", default-features = false, features = ["fs"] }
-serde = { version = "1.0.203", optional = true }
+serde = { version = "1.0.204", optional = true }
 serde_yaml = { version = "0.9.34", optional = true }
 sts = "0.1.23"
 tracing = "0.1.40"

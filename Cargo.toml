@@ -18,12 +18,14 @@ members = [
   "watch/ipv6_proxy",
   "watch/kvrocks",
   "watch/kvrocks_sentinel",
-  "watch/oceanbase",
+  "watch/mariadb",
   "watch/mysql_iptable",
   "watch/orchestrator",
   "watch/ping",
   "watch/ping_ver",
-  "watch/smtp", "watch/domain",
+  "watch/smtp",
+  "watch/domain",
+  "watch/cdn_refresh", "watch/heartbeat",
 ]
 resolver = "2"
 

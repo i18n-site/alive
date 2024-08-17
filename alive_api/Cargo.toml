@@ -1,5 +1,5 @@
 [dependencies]
-prost = "0.12.6"
+prost = "0.13.1"
 strum = { version = "0.26.3", features = ["strum_macros", "derive", "phf"] }
 
 [package]
@@ -26,4 +26,4 @@ all-features = true
 
 [build-dependencies]
 aok = "0.1.12"
-prost-build = "0.12.6"
+prost-build = "0.13.1"

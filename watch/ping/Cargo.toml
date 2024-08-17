@@ -39,5 +39,5 @@ version = "0.1.5"
 path = "../../alive_watch"
 
 [dependencies.serde]
-version = "1.0.203"
+version = "1.0.204"
 features = [ "derive" ]

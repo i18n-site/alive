@@ -13,7 +13,7 @@ all-features = true
 [dependencies]
 aok = "0.1.12"
 serde_yaml = "0.9.34"
-xsmtp = "0.1.9"
+xsmtp = "0.1.11"
 
 [dependencies.alive_alter]
 version = "0.1.4"
@@ -26,7 +26,7 @@ default-features = false
 features = [ "fs" ]
 
 [dependencies.serde]
-version = "1.0.203"
+version = "1.0.204"
 features = [ "derive" ]
 
 [dev-dependencies]

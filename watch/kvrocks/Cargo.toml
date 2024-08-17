@@ -40,7 +40,7 @@ path = "../../alive_watch"
 features = [ "cluster_alive" ]
 
 [dependencies.serde]
-version = "1.0.203"
+version = "1.0.204"
 features = [ "derive" ]
 
 [dependencies.redis_watch]

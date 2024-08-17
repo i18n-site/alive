@@ -22,7 +22,7 @@ features = [ "macros", "rt", "rt-multi-thread", "time", "sync" ]
 [dependencies]
 aok = "0.1.12"
 serde_yaml = "0.9.34"
-rustls-native-certs = "0.7.0"
+rustls-native-certs = "0.7.1"
 static_init = "1.0.3"
 const-str = "0.5.7"
 
@@ -44,5 +44,5 @@ version = "0.1.5"
 path = "../../alive_watch"
 
 [dependencies.serde]
-version = "1.0.203"
+version = "1.0.204"
 features = [ "derive" ]

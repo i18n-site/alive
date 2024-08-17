@@ -3,6 +3,8 @@ use reqwest::Client;
 use sonic_rs::{from_str, Deserialize};
 use str2ts::str2ts;
 
+pub const NOT_FREE: [&str; 3] = ["ua", "top", "org"];
+
 #[derive(Deserialize, Debug)]
 pub struct WhoisAs93Domain {
   expiration_date_in_time: String,
@@ -76,7 +78,7 @@ impl Domain {
     let host = host.into();
     Domain {
       free: if let Some(pos) = host.rfind('.') {
-        !["top"].contains(&&host[pos + 1..])
+        !NOT_FREE.contains(&&host[pos + 1..])
       } else {
         true
       },

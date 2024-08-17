@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+// use std::collections::HashSet;
 
 use alive_watch::{cluster_alive::ClusterAlive, yml_cluster_vps_li::Vps};
 use aok::{throw, Null, Result, OK};
@@ -9,7 +9,7 @@ mysql_watch::load!();
 
 #[derive(Debug, Default)]
 pub struct MysqlState {
-  pub li: Vec<(String, String)>,
+  pub is_master: bool,
 }
 
 struct Alive;
@@ -23,28 +23,21 @@ impl ClusterAlive<Conf> for Alive {
   }
 
   async fn ping(mut conn: Conn) -> Result<MysqlState> {
-    let li: Vec<(String, String)> = "SELECT ZONE,STATUS FROM oceanbase.DBA_OB_SERVERS"
-      .fetch(&mut conn)
-      .await?;
-    let state = MysqlState {
-      li: li.into_iter().filter(|i| i.1 != "ACTIVE").collect(),
-    };
-    Ok(state)
+    let is_master: bool = "SELECT CASE WHEN VARIABLE_VALUE=0 THEN TRUE ELSE FALSE END AS IS_MASTER FROM information_schema.GLOBAL_STATUS WHERE VARIABLE_NAME='SLAVES_RUNNING'"
+      .first(&mut conn)
+      .await?.unwrap();
+    Ok(MysqlState { is_master })
   }
 
   fn check(li: &[(String, Self::State)], _conf: &Conf, _vps_li: &[Vps]) -> Null {
-    let mut err = vec![];
-    let mut exist = HashSet::new();
-    for (_srv, state) in li {
-      for (vps, state) in state.li.iter() {
-        if !exist.contains(vps) {
-          err.push(format!("{} {}", vps, state));
-          exist.insert(vps);
-        }
+    let mut master = 0;
+    for i in li {
+      if i.1.is_master {
+        master += 1;
       }
     }
-    if !err.is_empty() {
-      throw!("{}", err.join(";"));
+    if master != 1 {
+      throw!("{master} master");
     }
     OK
   }

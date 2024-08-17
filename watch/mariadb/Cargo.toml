@@ -1,10 +1,10 @@
 [package]
-name = "oceanbase"
+name = "mariadb"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
 repository = "https://atomgit.com/i18n/alive.git"
-homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/oceanbase"
+homepage = "https://atomgit.com/i18n/alive/tree/dev/watch/mariadb"
 description = "mysql"
 
 [package.metadata.docs.rs]
@@ -44,7 +44,7 @@ version = "0.1.5"
 path = "../../alive_watch"
 
 [dependencies.serde]
-version = "1.0.203"
+version = "1.0.204"
 features = ["derive"]
 
 [dependencies.tokio]

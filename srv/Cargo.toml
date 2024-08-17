@@ -7,13 +7,13 @@ edition = "2021"
 aok = "0.1.12"
 axum = "0.7.5"
 axum_cors = "0.1.5"
-clap = "4.5.7"
+clap = "4.5.9"
 cmdv = "0.1.9"
 jemallocator = "0.5.4"
 loginit = "0.1.13"
-re = "0.1.7"
+re = "0.1.8"
 sts = "0.1.23"
-t3 = { version = "0.1.17", default-features = false }
+t3 = { version = "0.1.19", default-features = false }
 tower = "0.4.13"
 console-subscriber = { optional = true, version = "0.3.0" }
 tracing = "0.1.40"

@@ -17,7 +17,7 @@ dashmap = "6.0.1"
 ifs = { version = "0.1.36", default-features = false, features = ["fs"] }
 tracing = "0.1.40"
 const-str = { version = "0.5.7", optional = true }
-serde = { version = "1.0.203", optional = true }
+serde = { version = "1.0.204", optional = true }
 alive_api = { optional = true, version = "0.1.6", path = "../alive_api" }
 tokio = { optional = true, version = "1.38.0", features = [
   "macros",

@@ -36,7 +36,7 @@ pub async fn load(wc: &alive_watch::Conf) -> Result<Vec<Task<Arg>>> {
           for i in &ip.$attr {
             if let Some(li) = &host_ip.$ipv {
               for host in li {
-                r.push(Task::new(
+                r.push(Task::new_with_first_warn(
                   host.clone(),
                   Arg {
                     ip: IpAddr::$v(*i),
@@ -44,6 +44,7 @@ pub async fn load(wc: &alive_watch::Conf) -> Result<Vec<Task<Arg>>> {
                   },
                   [hostname.into(), stringify!($tag).into()],
                   DURATION,
+                  10,
                 ))
               }
             }
@@ -62,7 +63,7 @@ pub async fn load(wc: &alive_watch::Conf) -> Result<Vec<Task<Arg>>> {
         for host in host_li {
           for ip in &ip.ipv4_li {
             r.push(Task::new(
-              &host,
+              host,
               Arg {
                 ip: IpAddr::V4(*ip),
                 host: host.into(),
