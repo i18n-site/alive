@@ -1,5 +1,5 @@
 ol:
-  port: 124
+  port: 1217
   password: 4x3X8x11X522
   watch:
-    - mymaster
+    - i18n

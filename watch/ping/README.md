@@ -1,4 +1,4 @@
-[‼️]: ✏️ping/watch/README.mdt
+[‼️]: ✏️watch/ping/README.mdt
 
 # ping
 

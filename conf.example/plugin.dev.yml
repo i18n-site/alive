@@ -5,15 +5,20 @@ alter :
   # - mail
 
 watch :
-  - orchestrator
-  - kvrocks
-  - kvrocks_sentinel
-  # - mysql
+  - heartbeat
+  # - mariadb
   # - mysql_iptable
-  # - smtp
-  # - cname_flatten
   # - ipv6_proxy
+  # - cname_flatten
+  # - smtp
+  # - https
+  # - ping
+  # - kvrocks_sentinel
+  # - kvrocks
+  # - ping_ver
+  # - cdn_refresh
+  # - domain
   #
-  # - nginx & ssl
   # - cloudflareHA
-  # - stripe webhooks
+  # - mysql_iptable
+  # - orchestrator

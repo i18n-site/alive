@@ -1,0 +1,20 @@
+cluster:
+  all:
+    v4v6:
+      - s.i18n.site
+    v4:
+      - b2-img-md.3ti.site
+# todo 配置 哪些域名可以自动屏蔽 ip , 参见 https://xxxxxxx.xxxxxxxxx.xxx/xxxxxx/xxxx/xxxxxx?xxxx=4x6x2xx-20x1-233x-x9x-x2xx7x9x3x2x&xxxxx_xxxxxx_xxx=x685
+
+host:
+  all:
+    a0:
+      - a0.3ti.site
+    a1:
+      - a1.3ti.site
+    c0:
+      - c0.018007.xyz
+    c1:
+      - c1.018007.xyz
+    c2:
+      - c2.018007.xyz

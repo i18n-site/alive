@@ -1,4 +1,4 @@
-[‼️]: ✏️watch/mysql/README.mdt
+[‼️]: ✏️watch/mariadb/README.mdt
 
 # mysql
 

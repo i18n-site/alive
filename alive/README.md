@@ -1,4 +1,4 @@
-[‼️]: ✏️README.mdt
+[‼️]: ✏️alive/README.mdt
 
 # alive : 极简主义的监控 & 状态页 (无需数据库即可部署)
 
@@ -36,9 +36,18 @@
 
 用下面的方案可以免费部署
 
-后端部署到 fly.io
+#### 后端部署到 fly.io
+
+默认会启动两个后端 , 只保留一个即可 , 比如 :
+
+```
+fly machine list
+fly machine destroy d8d9999b292058 --force
+```
 
 #### 前端部署到 cloudflare
+
+推送代码到 github 的 main 分支 , 会自动触发 cloudflare page 的 webhooks 来部署
 
 ##### 绑定自动代码库
 
@@ -75,12 +84,15 @@
 0. `./new.alter.sh xxx` 新建报警插件
 0. `./sh/conf_example.sh` 从实际的配置导出演示的配置文件
 
+## 状态页面本身的监控
+
+可以用  [cron-job.org](https://cron-job.org) 监控
+
+![](https://i-01.eu.org/1713753667.webp)
+
 ## 后续计划
 
 后续计划暂无排期 , 只是备忘
 
 - 基于报警插件 , 可以对接后端数据库 , 持久化报警日志
 - 现在后端返回的数据有 `runed`, `cost_sum` , `avg10` , 可以用展示监控服务访问延时的变化 , 但是前端没做展示 (可以在服务延时异常的时候显示前端警告)
-- 貌似有一些内存泄露 , 需要排查 , 参考
-[记一次 Rust 内存泄漏排查之旅 | 经验总结篇](https://xie.infoq.cn/article/ac333e916b4594627ff322463)
-[蚂蚁集团 ｜ 如何在生产环境排查 Rust 内存占用过高问题](https://rustmagazine.github.io/rust_magazine_2021/chapter_5/rust-memory-troubleshootting.html)

@@ -1,0 +1,21 @@
+token: 09x231323xx0x1221xx9138xx920158x3x5x134238x211xxxxxxx51x9
+
+mysql: 2x7xX21XxXxxx4X.xxxx:XXxXXX8XxXXxx237@xxxxxxx4.xx-xxxxxxx-4.xxxx.xxx.xxxxxxxxx.xxx:00/xxxxx
+
+li:
+# https://xxxxxxx.xxxxxxxxxxx.xxx/xxx/?xxxxxx=xx-xxxxx-7#/xxx/xxxxxxxxxxx
+  - i18n.site
+  - 3ti.site # api for aliyun
+
+# https://xxxx.xxxxxxxxxx.xxx/
+  - x01.site # i18n.site cname
+  - me5.top # cloudflare cname for s.i18n.site
+  - 018007.xyz # api for contabo
+  - ok0.pw # p.3ti.site cname
+  - xxai.eu.org # 命令行发布包自动升级的 CDN
+  - u-01.eu.org # stripe webhook 文件的域名
+  - wcas.host # v.i18n.site
+  # - 1-8.pp.ua # v.i18n.site cname cloudflare
+
+  - gu321.com
+

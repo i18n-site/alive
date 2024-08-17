@@ -1,4 +1,4 @@
-[‼️]: ✏️cdn_refresh/watch/README.mdt
+[‼️]: ✏️watch/cdn_refresh/README.mdt
 
 # cdn_refresh
 
