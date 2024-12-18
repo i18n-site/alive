@@ -20,6 +20,7 @@ version = "1.38.0"
 features = [ "macros", "rt", "rt-multi-thread", "time", "sync" ]
 
 [dependencies]
+whois = "2.0"
 aok = "0.1.12"
 genv = "0.1.10"
 static_init = "1.0.3"
